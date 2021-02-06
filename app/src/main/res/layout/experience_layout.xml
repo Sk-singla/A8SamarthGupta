@@ -1,140 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/personalInfoHeaderTxt"
+        android:id="@+id/experienceTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Personal Info"
+        android:text="Experience"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         />
+
+    <ImageView
+        android:id="@+id/deleteView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_cancel"
+        app:layout_constraintTop_toTopOf="@id/experienceTxt"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 
     <TextView
-        android:id="@+id/nameTxt"
+        android:id="@+id/organisationTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
-        app:layout_constraintTop_toBottomOf="@id/personalInfoHeaderTxt"
+        android:text="Organisation"
+        app:layout_constraintTop_toBottomOf="@id/experienceTxt"
         app:layout_constraintStart_toStartOf="parent"
-        />
-    <EditText
-        android:id="@+id/nameInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Your Name"
-        app:layout_constraintTop_toBottomOf="@id/nameTxt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         />
 
-    <TextView
-        android:id="@+id/addressTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address"
-        app:layout_constraintTop_toBottomOf="@id/nameInput"
-        app:layout_constraintStart_toStartOf="parent"
-        />
     <EditText
-        android:id="@+id/addressInput"
+        android:id="@+id/organisationEdtTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Address"
-        app:layout_constraintTop_toBottomOf="@id/addressTxt"
+        android:hint="Organisation Name"
+        app:layout_constraintTop_toBottomOf="@id/organisationTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
     <TextView
-        android:id="@+id/emailTxt"
+        android:id="@+id/designaionTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Email"
-        app:layout_constraintTop_toBottomOf="@id/addressInput"
+        android:text="Designation"
+        app:layout_constraintTop_toBottomOf="@id/organisationEdtTxt"
         app:layout_constraintStart_toStartOf="parent"
         />
+
     <EditText
-        android:id="@+id/emailInput"
+        android:id="@+id/designationEdtTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Email"
-        app:layout_constraintTop_toBottomOf="@id/emailTxt"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
-    <TextView
-        android:id="@+id/phoneTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone"
-        app:layout_constraintTop_toBottomOf="@id/emailInput"
-        app:layout_constraintStart_toStartOf="parent"
-        />
-    <EditText
-        android:id="@+id/phoneInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Phone No."
-        app:layout_constraintTop_toBottomOf="@id/phoneTxt"
+        android:hint="Designation"
+        app:layout_constraintTop_toBottomOf="@id/designaionTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
     <TextView
-        android:id="@+id/linkedinTxt"
+        android:id="@+id/fromDateTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LinkedIn"
-        app:layout_constraintTop_toBottomOf="@id/phoneInput"
+        android:text="From (Date of Joining)"
+        app:layout_constraintTop_toBottomOf="@id/designationEdtTxt"
         app:layout_constraintStart_toStartOf="parent"
         />
+
     <EditText
-        android:id="@+id/linkedInInput"
+        android:id="@+id/fromDateEdtTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Your Linked Profile Link"
-        app:layout_constraintTop_toBottomOf="@id/linkedinTxt"
+        android:hint="From Date"
+        app:layout_constraintTop_toBottomOf="@id/fromDateTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
+
     <TextView
-        android:id="@+id/githubTxt"
+        android:id="@+id/toDateTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Github"
-        app:layout_constraintTop_toBottomOf="@id/linkedInInput"
+        android:text="To"
+        app:layout_constraintTop_toBottomOf="@id/fromDateEdtTxt"
         app:layout_constraintStart_toStartOf="parent"
         />
+
     <EditText
-        android:id="@+id/gitHubInput"
+        android:id="@+id/toEdtTxts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="GitHub Profile Link"
-        app:layout_constraintTop_toBottomOf="@id/githubTxt"
+        android:hint="To Date"
+        app:layout_constraintTop_toBottomOf="@id/toDateTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
 
+    <TextView
+        android:id="@+id/roleTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Role"
+        app:layout_constraintTop_toBottomOf="@id/toEdtTxts"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
-
-    <Button
-        android:id="@+id/savePersonalDetailsBtn"
+    <EditText
+        android:id="@+id/roleEdtTxt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Save"
-        app:layout_constraintTop_toBottomOf="@id/gitHubInput"
+        app:layout_constraintTop_toBottomOf="@id/roleTxt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         />
-
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

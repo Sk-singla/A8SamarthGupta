@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/educationTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Qualification"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/deleteView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_cancel"
+        app:layout_constraintTop_toTopOf="@id/educationTxt"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/courseTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Course"
+        app:layout_constraintTop_toBottomOf="@id/educationTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/courseEdtTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Certificate Name"
+        app:layout_constraintTop_toBottomOf="@id/courseTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/instituteTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Institute"
+        app:layout_constraintTop_toBottomOf="@id/courseEdtTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/instituteEdtTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Institute Name"
+        app:layout_constraintTop_toBottomOf="@id/instituteTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/cgpaTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CGPA/Percentage"
+        app:layout_constraintTop_toBottomOf="@id/instituteEdtTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/cgpaEdtTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="CGPA"
+        app:layout_constraintTop_toBottomOf="@id/cgpaTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/passingYearTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Year of Passing"
+        app:layout_constraintTop_toBottomOf="@id/cgpaEdtTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/passingYearEdtTxts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Passing Year"
+        app:layout_constraintTop_toBottomOf="@id/passingYearTxt"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
