@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/manualAutoOptionFragment">
+
+    <fragment
+        android:id="@+id/manualAutoOptionFragment"
+        android:name="com.example.resumebuilder.ui.ManualAutoOptionFragment"
+        android:label="ManualAutoOptionFragment" >
+        <action
+            android:id="@+id/action_manualAutoOptionFragment_to_dataInputFragment"
+            app:destination="@id/dataInputFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataInputFragment"
+        android:name="com.example.resumebuilder.ui.DataInputFragment"
+        android:label="DataInputFragment" >
+        <action
+            android:id="@+id/action_dataInputFragment_to_achievementsFragment"
+            app:destination="@id/achievementsFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_certificationFragment"
+            app:destination="@id/certificationFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_educationFragment"
+            app:destination="@id/educationFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_experienceFragment"
+            app:destination="@id/experienceFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_extraCurricularFragment"
+            app:destination="@id/extraCurricularFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_hobbyFragment"
+            app:destination="@id/hobbyFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_interestsFragment"
+            app:destination="@id/interestsFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_personalDetailsFragment"
+            app:destination="@id/personalDetailsFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_projectsFragment"
+            app:destination="@id/projectsFragment" />
+        <action
+            android:id="@+id/action_dataInputFragment_to_skillsFragment"
+            app:destination="@id/skillsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/achievementsFragment"
+        android:name="com.example.resumebuilder.ui.data.AchievementsFragment"
+        android:label="AchievementsFragment" />
+    <fragment
+        android:id="@+id/certificationFragment"
+        android:name="com.example.resumebuilder.ui.data.CertificationFragment"
+        android:label="CertificationFragment" />
+    <fragment
+        android:id="@+id/educationFragment"
+        android:name="com.example.resumebuilder.ui.data.EducationFragment"
+        android:label="EducationFragment" />
+    <fragment
+        android:id="@+id/experienceFragment"
+        android:name="com.example.resumebuilder.ui.data.ExperienceFragment"
+        android:label="ExperienceFragment" />
+    <fragment
+        android:id="@+id/extraCurricularFragment"
+        android:name="com.example.resumebuilder.ui.data.ExtraCurricularFragment"
+        android:label="ExtraCurricularFragment" />
+    <fragment
+        android:id="@+id/hobbyFragment"
+        android:name="com.example.resumebuilder.ui.data.HobbyFragment"
+        android:label="HobbyFragment" />
+    <fragment
+        android:id="@+id/interestsFragment"
+        android:name="com.example.resumebuilder.ui.data.InterestsFragment"
+        android:label="InterestsFragment" />
+    <fragment
+        android:id="@+id/personalDetailsFragment"
+        android:name="com.example.resumebuilder.ui.data.PersonalDetailsFragment"
+        android:label="PersonalDetailsFragment" />
+    <fragment
+        android:id="@+id/projectsFragment"
+        android:name="com.example.resumebuilder.ui.data.ProjectsFragment"
+        android:label="ProjectsFragment" />
+    <fragment
+        android:id="@+id/skillsFragment"
+        android:name="com.example.resumebuilder.ui.data.SkillsFragment"
+        android:label="SkillsFragment" />
+</navigation>

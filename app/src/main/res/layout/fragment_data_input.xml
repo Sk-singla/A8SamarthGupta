@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <Button
+        android:id="@+id/gotoPersonalDetailsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Personal Details"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/gotoEducationBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Education"
+        app:layout_constraintTop_toBottomOf="@id/gotoPersonalDetailsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/gotoExperienceBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Experience"
+        app:layout_constraintTop_toBottomOf="@id/gotoEducationBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/gotoSkillsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Skills"
+        app:layout_constraintTop_toBottomOf="@id/gotoExperienceBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/gotoProjectsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Projects"
+        app:layout_constraintTop_toBottomOf="@id/gotoSkillsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/gotoCertificatesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Certificates"
+        app:layout_constraintTop_toBottomOf="@id/gotoProjectsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/gotoAchievementsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Achievements"
+        app:layout_constraintTop_toBottomOf="@id/gotoCertificatesBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/gotExtraCurricularBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Extra Curricular"
+        app:layout_constraintTop_toBottomOf="@id/gotoAchievementsBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/gotoHobbyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hobbies"
+        app:layout_constraintTop_toBottomOf="@id/gotExtraCurricularBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/gotoInterstsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interests"
+        app:layout_constraintTop_toBottomOf="@id/gotoHobbyBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
