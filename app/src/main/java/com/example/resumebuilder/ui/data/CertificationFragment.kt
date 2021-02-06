@@ -12,9 +12,6 @@ class CertificationFragment:Fragment(R.layout.fragement_certification) {
 
     private lateinit var binding: FragementCertificationBinding
 
-    companion object{
-        var totalCertificates = 0
-    }
 
     private var certificateViewList = arrayListOf<View>()
 
@@ -32,17 +29,16 @@ class CertificationFragment:Fragment(R.layout.fragement_certification) {
 
     private fun addCertificateLayout(){
         val certificateView = layoutInflater.inflate(R.layout.certificate_layout,null,false)
-        totalCertificates += 1
-        certificateView.findViewById<TextView>(R.id.certificateTxt).text = "Certificate $totalCertificates"
+        certificateView.findViewById<TextView>(R.id.certificateTxt).text = "Certificate ${certificateViewList.size + 1}"
         certificateView.findViewById<ImageView>(R.id.deleteView).setOnClickListener {
             deleteCertificate(certificateView)
         }
         certificateViewList.add(certificateView)
+        binding.certificateLinearLayout.addView(certificateView)
     }
 
     private fun deleteCertificate(v:View){
         binding.certificateLinearLayout.removeView(v)
-        totalCertificates -= 1
 
         // remove from array list
         certificateViewList.remove(v)

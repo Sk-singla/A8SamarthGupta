@@ -12,10 +12,6 @@ class ExperienceFragment:Fragment(R.layout.fragment_experience) {
 
     private lateinit var binding: FragmentExperienceBinding
 
-    companion object{
-        var experienceCount = 0
-    }
-
     private var experienceViewList = arrayListOf<View>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,18 +27,16 @@ class ExperienceFragment:Fragment(R.layout.fragment_experience) {
 
     private fun addExperienceLayout() {
         val experienceView = layoutInflater.inflate(R.layout.experience_layout,null,false)
-        experienceCount += 1
-
-        experienceView.findViewById<TextView>(R.id.experienceTxt).text = "Experience ${experienceCount}"
+        experienceView.findViewById<TextView>(R.id.experienceTxt).text = "Experience ${experienceViewList.size + 1}"
         experienceView.findViewById<ImageView>(R.id.deleteView).setOnClickListener {
             deleteCertificate(experienceView)
         }
         experienceViewList.add(experienceView)
+        binding.experienceLinearLayout.addView(experienceView)
     }
 
     private fun deleteCertificate(v:View){
         binding.experienceLinearLayout.removeView(v)
-        experienceCount -= 1
 
         // remove from array list
         experienceViewList.remove(v)

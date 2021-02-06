@@ -14,9 +14,6 @@ class AchievementsFragment: Fragment(R.layout.fragment_achievments) {
 
     private lateinit var binding: FragmentAchievmentsBinding
 
-    companion object{
-        var achievementCount = 0
-    }
 
     var achievementViewList = arrayListOf<View>()
 
@@ -32,17 +29,16 @@ class AchievementsFragment: Fragment(R.layout.fragment_achievments) {
 
     private fun addAchievementLayout(){
         val achievementView = layoutInflater.inflate(R.layout.achievement_layout,null,false)
-        achievementCount += 1
-        achievementView.findViewById<TextView>(R.id.certificateTxt).text = "Achievement ${achievementCount}"
+        achievementView.findViewById<TextView>(R.id.acheivementTxt).text = "Achievement ${achievementViewList.size + 1}"
         achievementView.findViewById<ImageView>(R.id.deleteView).setOnClickListener {
             deleteAchievement(achievementView)
         }
         achievementViewList.add(achievementView)
+        binding.achievementLinearLayout.addView(achievementView)
     }
 
     private fun deleteAchievement(v:View){
         binding.achievementLinearLayout.removeView(v)
-        achievementCount -= 1
 
         // remove from array list
         achievementViewList.remove(v)

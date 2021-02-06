@@ -13,14 +13,13 @@ class EducationFragment:Fragment(R.layout.fragment_education) {
 
     private lateinit var binding: FragmentEducationBinding
 
-    companion object{
-        var educationCount = 1
-    }
+
     private var educationViewList = arrayListOf<View>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentEducationBinding.bind(view)
+        addEducationLayout()
 
         binding.addEducationLayoutBtn.setOnClickListener {
             addEducationLayout()
@@ -29,18 +28,17 @@ class EducationFragment:Fragment(R.layout.fragment_education) {
 
     private fun addEducationLayout() {
         val educationView = layoutInflater.inflate(R.layout.education_layout,null,false)
-        educationCount += 1
 
-        educationView.findViewById<TextView>(R.id.educationTxt).text = "Qualification ${educationCount}"
+        educationView.findViewById<TextView>(R.id.educationTxt).text = "Qualification ${educationViewList.size + 1}"
         educationView.findViewById<ImageView>(R.id.deleteView).setOnClickListener {
             deleteCertificate(educationView)
         }
         educationViewList.add(educationView)
+        binding.educationLinearLayout.addView(educationView)
     }
 
     private fun deleteCertificate(v:View){
         binding.educationLinearLayout.removeView(v)
-        educationCount -= 1
 
         // remove from array list
         educationViewList.remove(v)
